@@ -38,7 +38,12 @@
 			<p>Je <del>memos</del>, donc je suis - <em>René Descartes fans</em></p>
 		</blockquote>
 		<blockquote>
-			<wb:share-button addition="simple" type="web" url="https://weibo.com/7914503119/OCMgXcNVT"></wb:share-button> 
+		        <wb:feed 
+		            mid="OCMgXcNVT" 
+		            width="500" 
+		            height="600" 
+		            language="zh_cn">
+		        </wb:feed>		
 		</blockquote>
 		<div class="total">Total <span id="total">0</span> Memos 🎉</div>
 
@@ -85,6 +90,17 @@
 	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript"></script>
+    <!-- 初始化微博 SDK -->
+    <script>
+        window.onload = function () {
+            WB2.anywhere(function (W) {
+                W.widget.feed({
+                    mid: 'OCMgXcNVT',
+                    language: 'zh_cn',
+                });
+            });
+        };
+    </script>
 </body>
 
 </html>
